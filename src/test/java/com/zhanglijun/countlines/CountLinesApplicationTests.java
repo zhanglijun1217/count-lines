@@ -49,6 +49,7 @@ public class CountLinesApplicationTests {
 			executorService.execute(new ScanNumTask(s, filterProcessManager));
 		}
 
+
 		executorService.shutdown();
 		// 这里要保证线程都执行完 再去打印结果 这里是通过awaitTermination方法来实现线程执行完
 		while (!executorService.awaitTermination(100, TimeUnit.MILLISECONDS)) {
